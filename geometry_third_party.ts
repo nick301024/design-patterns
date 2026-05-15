@@ -36,4 +36,12 @@ export class Calculator {
       Math.pow(rectangle.getHeight(), 2) + Math.pow(rectangle.getWidth(), 2),
     );
   }
+
+  public static getWidthHeightRatio(rectangle: Rectangular): number {
+    const width = rectangle.getWidth();
+    const height = rectangle.getHeight();
+    
+    if (height === 0) return 0;
+    return width / height;
+  }
 }

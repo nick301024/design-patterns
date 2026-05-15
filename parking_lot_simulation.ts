@@ -32,6 +32,10 @@ const display = async (lot: ParkingLot) => {
     await sleep(refreshDisplayIntervalMillis);
   }
 };
+const lot = new ParkingLot("Bahnhof Parking", 100);
+const display = new Display();
+
+lot.subscribe(display); 
 
 const bahnhofParking = new ParkingLot("Bahnhof Parking", 100);
 const screen = display(bahnhofParking);
